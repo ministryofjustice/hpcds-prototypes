@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/sign-in" method="post" class="form">
+        
+          <fieldset>
+              <legend>
+                  <h1 class="heading-xlarge">Log in</h1>
+              </legend>
+              <div class="form-group">
+                  <label class="form-label" for="id-email">
+  Email address                                  
+</label>
+                  <input class="form-control" name="email" type="" id="id-email" value="">
+              </div>
+              <div class="form-group">
+                  <label class="form-label" for="id-password">
+  Password                                  
+</label>
+                  <input class="form-control" name="password" type="password" id="id-password" value="">
+              </div>
+          </fieldset>
+
+          <div class="form-group">
+              <a href="landing" class="button">Sign in</a>
+          </div>
+
+      </form>
+
+    </div>
+    <div class="column-third">
+
+      <aside class="govuk-related-items" role="complementary">
+        <h2 class="heading-medium" id="subsection-title">Subsection</h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="font-xsmall">
+            <li><a href="#">Related link</a></li>
+            <li><a href="#">Related link</a></li>
+            <li><a href="#" class="bold-xsmall">More <span class="visuallyhidden">in Subsection</span></a></li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <form action="/sign-in" method="post" class="form">
+        
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Welcome</h1>
+          </div>
+          <div class="column-one-third">
+            <p style="text-align: right">
+              You are logged in as <a href="#">User 51</a><br>
+              Last visit 13.11.2017
+            </p></div>
+        </div>
+
+        
+        
+
+        <p>You can upload one spreadsheet at a time.</p>
+
+        <div class="form-group">
+          <a class="button button-secondary">Choose file</a>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>File name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">Upload at least one file to continue</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-group" style="margin-top: 30px;">
+            <input class="button" type="submit" value="Continue" disabled="disabled" aria-disabled="true">
+        </div>
+
+      </form>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}

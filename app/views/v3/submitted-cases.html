@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+      <h1 class="heading-xlarge">Your saved cases</h1>
+    
+      <p>5 cases</p>
+
+      <div class="form-group">
+          <a href="http://laa-opa-aws.webhop.org/claim-for-housing-possession-court-duty-mobile/" class="button button-start">Add new case</a>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Date of session</th>
+            <th>Court</th>
+            <th>Case reference</th>
+            <th>Client</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>17/11/2017</td>
+            <td>AB west</td>
+            <td>None</td>
+            <td>Tom Smith</td>
+            <td>Error</td>
+          </tr>
+          <tr>
+            <td>16/11/2017</td>
+            <td>Cardiff</td>
+            <td>AB7282</td>
+            <td>Anne Morrison</td>
+            <td>Draft</td>
+          </tr>
+          <tr>
+            <td>14/11/2017</td>
+            <td>Swansea</td>
+            <td>AB3445</td>
+            <td>Liz Griffin</td>
+            <td>Error</td>
+          </tr>
+          <tr>
+            <td>13/11/2017</td>
+            <td>Wrexham</td>
+            <td>AB6319</td>
+            <td>Maria Withers</td>
+            <td>Ready</td>
+          </tr>
+          <tr>
+            <td>10/11/2017</td>
+            <td>Cardiff</td>
+            <td>AB3481</td>
+            <td>Anne Morrison</td>
+            <td>Ready</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="heading-medium">Ready to claim?</h2>
+
+      <p>When all cases have been added above, please make submit your claim by clicking button below.</p>
+
+      <div class="form-group">
+          <a href="#" class="button">Claim payment for cases</a>
+      </div>
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+// Pattern: buttons
+// Problem: Things need clicking
+
+.button-secondary {
+   @include button($grey-3);
+ }
+
+ .button-affordance {
+  @include button($govuk-blue);
+}

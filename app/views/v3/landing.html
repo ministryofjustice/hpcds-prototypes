@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <form action="/sign-in" method="post" class="form">
+        
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Welcome</h1>
+          </div>
+          <div class="column-one-third">
+            <p style="text-align: right">
+              You are logged in as <a href="#">User 51</a><br>
+              Last visit 13.11.2017
+            </p></div>
+        </div>
+
+        <div class="form-group">
+            <a href="http://laa-opa-aws.webhop.org/claim-for-housing-possession-court-duty-mobile/" class="button button-start">Start new case</a>
+        </div>
+
+        <a href="submitted-cases">5 Saved cases</a>
+
+        <h2 class="heading-medium">Other actions</h2>
+        <ul>
+          <li><a href="submitted-claims">Submitted claims</a></li>
+          <li><a href="user-account">User account</a></li>
+        </ul>
+
+      </form>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}

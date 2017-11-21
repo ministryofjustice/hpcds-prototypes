@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block proposition_header %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block header_class %}
+  <!-- blank to remove the proposition header -->
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/sign-in" method="post" class="form">
+        
+        <h1 class="heading-xlarge">Upload and check your data</h1>
+        
+
+        <p>You can upload one file at a time.</p>
+
+        <div class="form-group">
+          <input class="button button-secondary" type="submit" value="Choose file">
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>File name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">Upload at latest one file to continue</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-group" style="margin-top: 30px;">
+            <input class="button" type="submit" value="Continue" disabled="disabled" aria-disabled="true">
+        </div>
+
+      </form>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}
