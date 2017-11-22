@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+       
+        <h1 class="heading-xlarge">
+          Corrections
+        </h1>
+
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+            
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+            Make corrections then upload the file again
+          </h2>
+
+          <p>File: HPCDS_November_2017_Claim.xls</p>
+    
+        </div>
+
+        <div class="form-group">
+            <a href="success" class="button">Back to file list</a>
+        </div>
+        
+        <table class="align-top">
+          <thead>
+            <tr>
+              <th>Column heading</th>
+              <th>Errors</th>
+              <th style="width: 65%;">Correction</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Court</td>
+              <td><a href="court-errors">View 4 errors</a></td>
+              <td>
+                <p>You must give the agreed name for the court - exactly as given in the court allowed value list.</p>
+                <p>See the <a href="">court allowed valued list</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Date of session</td>
+              <td><a href="date-of-session-errors">View 2 errors</a></td>
+              <td>
+                <p>You must format the date as set out in the data formatting rules.</p>
+                <p>See the <a href="">data formatting rules</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Type of proceeding</td>
+              <td><a href="">View 8 errors</a></td>
+              <td>
+                <p>You must give an agreed type of proceeding - exactly as given in the type of proceeding allowed list.</p>
+                <p>See the <a href="">type of proceeding allowed list</a>.</p>
+              </td>
+            </tr>
+            <tr>
+              <td>Tenure</td>
+              <td><a href="">View 1 errors</a></td>
+              <td>
+                <p>You must give an agreed name for the tenure - exactly as given in the tenure allowed list.</p>
+                <p>See the <a href="">tenure allowed list</a>.</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}
