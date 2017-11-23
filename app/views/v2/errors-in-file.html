@@ -9,14 +9,24 @@
 <main id="content" role="main">
 
   <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="column-full">
 
       <form action="/sign-in" method="post" class="form">
         
-        <h1 class="heading-xlarge">Errors in file</h1>
+        <h1 class="heading-xlarge">Spreadsheet validation errors</h1>
         
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+          
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+            Make corrections then upload the file again
+          </h2>
 
-        <p>There are 10 errors in your file:</p>
+          <p>File: HPCDS_November_2017_Claim.xls</p>
+    
+        </div>
+
+        <a href="landing-2" class="button">Back to upload page</a>
+
 
         <h2 class="heading-medium">Claim level validation errors</h2>
 
@@ -77,9 +87,7 @@
             </tr>
           </thead>
         </table>
-
-        <p class="flash">Please re-upload the corrected file.</p>
-
+        
       </form>
 
     </div>
