@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <form action="/sign-in" method="post" class="form">
+        
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Welcome</h1>
+          </div>
+          <div class="column-one-third">
+            <p style="text-align: right">
+              You are logged in as <a href="#">User 51</a><br>
+              Last visit 13.11.2017
+            </p></div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="file-input">
+            Upload spreadsheet
+          </label>
+          <input class="form-control" id="ni-number" type="text" name="ni-number" value="HPCDS_November_2017_Claim.xls">
+        </div>
+
+        <div class="form-group">
+            <a href="validated" class="button">Upload</a>
+        </div>
+
+      </form>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}

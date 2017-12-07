@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+       
+        <h1 class="heading-large">
+          What's your email address?
+        </h1>
+
+        <p>We'll send you a single-use confirmation code after you upload your data.</p>
+    
+        <div class="form-group">
+          <label class="form-label" for="ni-number">
+              Email address
+            </label>
+            <input class="form-control" id="ni-number" type="text" name="ni-number">
+        </div>
+
+        <details class="form-group">
+            <summary><span class="summary">Providers who can use this service</span></summary>
+            <div class="panel panel-border-narrow">
+                <ul class="list list-bullet">
+                    <li>Biffa</li>
+                    <li>Brett Aggregates</li>
+                    <li>CEMEX</li>
+                    <li>Cory Environmental</li>
+                    <li>FCC Recycling</li>
+                    <li>Grundon Waste Management</li>
+                    <li>SUEZ Recycling and Recovery (SITA)</li>
+                    <li>Veolia</li>
+                    <li>Viridor</li>
+                </ul>
+            </div>
+          </details>
+          <p>If your provider has not been set up, please carry on with your normal way of sending data.</p>
+
+        <div class="form-group">
+            <a href="verification-code" class="button">Continue</a>
+        </div>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}

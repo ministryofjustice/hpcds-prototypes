@@ -1,15 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Start page example
-{% endblock %}
-
-{% block proposition_header %}
-  <!-- blank to remove the proposition header -->
-{% endblock %}
-
-{% block header_class %}
-  <!-- blank to remove the proposition header -->
+  Upload
 {% endblock %}
 
 {% block content %}
@@ -21,28 +13,35 @@
 
       <form action="/sign-in" method="post" class="form">
         
-        <h1 class="heading-xlarge">Upload and check your data</h1>
+        <h1 class="heading-large">Upload Contract Report form</h1>
         
-
-        <p>You can upload one file at a time.</p>
-
         <div class="form-group">
-          <input class="button button-secondary" type="submit" value="Choose file">
+          <fieldset>
+      
+            <legend>
+              <h1 class="heading-medium">Which month and year is th</h1>
+            </legend>
+      
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="november2017">
+              <label for="radio-1">November 2017</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="december2017">
+              <label for="radio-2">December 2017</label>
+            </div>
+            
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="january2018">
+              <label for="radio-3">January 2018</label>
+            </div>
+      
+          </fieldset>
         </div>
 
-        <table class="table">
-          <thead>
-            <tr>
-              <th>File name</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td colspan="2">Upload at latest one file to continue</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="form-group">
+          <a href="upload-1" class="button button-secondary">Choose your file</a>
+        </div>
 
         <div class="form-group" style="margin-top: 30px;">
             <input class="button" type="submit" value="Continue" disabled="disabled" aria-disabled="true">

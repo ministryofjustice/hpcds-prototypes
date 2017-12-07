@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+LAA Online Portal
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">LAA Online Portal</h1>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <p>Welcome to the Online Portal. Please click a link below to access the application you require.</p><p>
+            </p><p>If you experience any problems using the Online Portal, or would like to view guidance documents for the Online Portal applications, please click on the help link on this page.</p>
+            <h2 class="heading-medium">Online Applications:</h2>
+            <div>
+                <ul>
+                    <li>
+                        <a href="https://lsconlineapps.legalservices.gov.uk/oa_servlets/AppsLogin">Contracted Work and Administration (CWA)</a>
+                        <p>Submit Crime Lower, Legal Help Level 1 and 2 claims, Mediation Claims, New Matter Starts and manage your Online Users and Contacts</p>
+                    </li>
+
+                    <li>
+                        <a href="landing">Claim for Housing Possession Court Duty</a>
+                        <p>Submit claims for work carried out under the Housing Possession Court Duty Scheme (as 'EDuthie001').</p>
+                    </li>
+
+                </ul>	
+            </div>
+        </div>	
+        
+        <!-- side bar -->
+        <div class="column-one-third">
+            <ul>
+                <li>Logged in as: Nick Rowlands</li>
+                <li><a href="https://portal.legalservices.gov.uk/identity" onclick="trackOutboundLink('LAAPortal - My Portal Account');return true;" target="_blank">My Portal Account</a></li>
+                <li><a href="https://portal.legalservices.gov.uk/oam/server/logout?end_url=https://portal.legalservices.gov.uk/LAALogin/pages/Logout.jsp" onclick="trackOutboundLink('LAAPortal - Logout');return true;">Log Out</a></li>
+            </ul>
+            <br>
+            <div id="global-header-bar"></div>
+            <h2 class="heading-small">Guidance</h2>
+            <ul>
+                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAAPortal - Guidance');return true;" target="_blank">Terms and Conditions</a></li>
+                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAAPortal - Guidance');return true;" target="_blank">List of Services</a></li>
+                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAAPortal - Guidance');return true;" target="_blank">Help</a></li>
+            </ul>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}

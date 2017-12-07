@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-large"><span id="title">Court allowed values</span></h1>
+        </div>
+        <div class="column-third float-right" style="float: right;">
+            <h2 class="heading-small">Version 1.0</h2>
+            <details>
+                <summary><span class="summary">How we deal with changes</span></summary>
+                <div class="panel panel-border-narrow">
+                    <p>We aim to keep these allowed values fixed. This should allow you to adapt your software systems to use these values. If we need to make changes, we won't remove values but we may add missing values as alternatives or correct any mistakes.</p>
+                </div>
+            </details>
+        </div>
+        <div class="column-two-thirds">
+            <p>Use only these values, spelt exactly as they are in this list. Contact us <a href="#contact">if you need to report using a value that is not in this list</a>.</p>
+            <p class="download"><i class="icon icon-file-download"></i> <a href="#">Download court allowed values list (CSV)</a></p>
+            <div class="form-group inline search-list ">
+                <form method="get" action="/display-list/search">
+                    <label class="form-label" for="search">Search this list</label>
+                    <input id="search" name="q" class="form-control" type="text" value="">
+                    <input class="button" type="submit" value="Search">
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+
+    <table id="controlled-list-table" class="Meth_Stand table-control mobile-format">
+        <thead>
+        <tr>
+            <th scope="col" style="width: 40%;">Court</th>
+            <th scope="col">Notes</th>
+        </tr>
+        </thead>
+        <tbody class="controlled-list-table-body">
+        <tr>
+            <td class="name">Aberdare</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Blackwood</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Bridgend</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Caernarfon</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Cardiff</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Carmarthen</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Conwy &amp; Colwyn</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Llanelli</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Llangefni</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Merthyr Tydfil</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Mold</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Neath &amp; Port Talbot</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Newport (Gwent)</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Pontypool</td>
+            <td class="notes"></td>
+        </tr>
+        <tr>
+            <td class="name">Pontypridd</td>
+            <td class="notes"></td>
+        </tr>
+        
+        </tbody>
+    </table>
+
+</main>
+
+{% endblock %}

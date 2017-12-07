@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <form action="/sign-in" method="post" class="form">
+        
+        <h1 class="heading-xlarge">Spreadsheet validation errors</h1>
+        
+        <div class="error-summary" role="alert" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+          
+          <h2 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+            Make corrections then upload the file again
+          </h2>
+
+          <p>File: HPCDS_November_2017_Claim.xls</p>
+    
+        </div>
+
+        <a href="landing-2" class="button">Back to upload page</a>
+
+
+        <h2 class="heading-medium">Claim level validation errors</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Cell reference</th>
+              <th>Error</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A3</td>
+              <td>Date of birth not in range</td>
+            </tr>
+            <tr>
+              <td>B5</td>
+              <td>Claim dated in the future</td>
+            </tr>
+            <tr>
+              <td>B9</td>
+              <td>Claim dated on a weekend</td>
+            </tr>
+            <tr>
+              <td>M11</td>
+              <td>Date of birth looks wrong</td>
+            </tr>
+            <tr>
+              <td>Q9</td>
+              <td>Claim dated on a weekend</td>
+            </tr>
+            <tr>
+              <td>T9</td>
+              <td>Claim dated on a weekend</td>
+            </tr>
+            <tr>
+              <td>Z11</td>
+              <td>Date of birth looks wrong</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="heading-medium">Submission level validation errors</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Row</th>
+              <th>Error</th>
+            </tr>
+            <tr>
+              <td>E, F, O, R</td>
+              <td>More than one case in the same court on the same day</td>
+            </tr>
+            <tr>
+              <td>G, H, P, Q</td>
+              <td>These cases are out of date</td>
+            </tr>
+          </thead>
+        </table>
+        
+      </form>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}

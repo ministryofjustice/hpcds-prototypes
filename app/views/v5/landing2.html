@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Claim for Housing Possession Court Duty
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+      <h1 class="heading-large">Check that you can use this service</h1>
+    
+      <div class="text">
+        <h2 class="heading-medium">1. You need to be set up on the system</h2>
+
+        <details class="form-group">
+          <summary><span class="summary">Providers who can use this service</span></summary>
+          <div class="panel panel-border-narrow">
+              <ul class="list list-bullet">
+                  <li>Biffa</li>
+                  <li>Brett Aggregates</li>
+                  <li>CEMEX</li>
+                  <li>Cory Environmental</li>
+                  <li>FCC Recycling</li>
+                  <li>Grundon Waste Management</li>
+                  <li>SUEZ Recycling and Recovery (SITA)</li>
+                  <li>Veolia</li>
+                  <li>Viridor</li>
+              </ul>
+          </div>
+        </details>
+        <p>If your provider has not been set up, please carry on with your normal way of sending data.</p>
+
+
+        <h2 class="heading-medium">2. Your data must be in the right format</h2>
+
+        <p>Make sure your data is in an Excel file that meets the <a href="/guidance/landfill-data-rules">data formatting rules</a> and uses only the allowed values.</p>
+
+        <p>You can use the system to check data file format without doing a final submission.</p>
+
+        <h2 class="heading-medium">3. You’ll need access to email</h2>
+
+        <p>We’ll send you a single-use confirmation code after you upload your data.</p>
+
+        <!-- Primary button -->
+        <div class="form-group">
+          <p><a href="upload" class="button">Continue</a></p>
+        </div>
+        <details class="form-group">
+          <summary><span class="summary">Alternatively, submit claims directly from your CMS</span></summary>
+          <div class="panel panel-border-narrow">
+            <p>Application programming interfaces (APIs) allow applications to share and consume data.</p>
+            <p>If your provider uses a case management system, it may be possible for your software
+              vendor to configure it so you can send data directly from it to the LAA.
+            </p>
+          </div>
+        </details>
+
+      </div>
+    </div>  
+  </div>
+
+</main>
+
+{% endblock %}

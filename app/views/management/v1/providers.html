@@ -1,0 +1,284 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Claim for Housing Possession Court Duty
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">Providers</h1>
+
+  <ul class="grid-row">
+    <li class="card column-one-quarter">
+      <a href="claims-outstanding" class="card__body">
+        <span class="bold-xlarge">2</span>
+        <span class="bold-small">flagged</span>
+      </a>
+      <div class="card__footer">
+        <span class="font-small">How many certificates sponsorship have left to use.</span>
+      </div>
+    </li>
+    <li class="card column-one-quarter">
+      <a href="#0" class="card__body">
+        <span class="bold-xlarge">5</span>
+        <span class="bold-small">contracts expiring</span>
+      </a>
+      <div class="card__footer">
+        <span class="font-small">This is how many certificates sponsorship have used.</span>
+      </div>
+    </li>
+    <li class="card column-one-quarter">
+      <a href="claims-processed" class="card__body">
+        <span class="bold-xlarge">17</span>
+        <span class="bold-small">schedule updates requested</span>
+      </a>
+      <div class="card__footer">
+        <span class="font-small">This is how many certificates sponsorship have used.</span>
+      </div>
+    </li>
+    <li class="card column-one-quarter">
+      <a href="claims-processed" class="card__body">
+        <span class="bold-xlarge">1</span>
+        <span class="bold-small">cancelled contracts</span>
+      </a>
+      <div class="card__footer">
+        <span class="font-small">This is how many certificates sponsorship have used.</span>
+      </div>
+    </li>
+  </ul>
+
+  {% 
+    set providers = [
+    {
+      "name": "ALLETSONS"
+    },
+    {
+      "name": "BEN HOARE BELL LLP"
+    },
+    {
+      "name": "BOLTON CAB"
+    },
+    {
+      "name": "BRIGHTON HOUSING TRUST"
+    },
+    {
+      "name": "BURD WARD SOLICITORS"
+    },
+    {
+      "name": "BURY LAW CENTRE"
+    },
+    {
+      "name": "CLARK WILLIS"
+    },
+    {
+      "name": "CLARKE KIERNAN"
+    },
+    {
+      "name": "COMMUNITY ADVICE AND LAW SERVICE"
+    },
+    {
+      "name": "COMMUNITY LAW SERVICE"
+    },
+    {
+      "name": "COVENTRY LAW CENTRE"
+    },
+    {
+      "name": "CUMBRIA LAW CENTRE"
+    },
+    {
+      "name": "DAVID LONG SOLICITORS"
+    },
+    {
+      "name": "DERBYSHIRE LAW CENTRE"
+    },
+    {
+      "name": "DIRECT HELP & ADVICE"
+    },
+    {
+      "name": "DUNCAN LEWIS"
+    },
+    {
+      "name": "EDWARDS DUTHIE"
+    },
+    {
+      "name": "EDWARDS DUTHIE SOLICITORS"
+    },
+    {
+      "name": "FOUNDATION"
+    },
+    {
+      "name": "FUSION HOUSING LTD"
+    },
+    {
+      "name": "GATESHEAD CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "GLOUCESTER LAW CENTRE"
+    },
+    {
+      "name": "GREENWICH HOUSING RIGHTS"
+    },
+    {
+      "name": "HADAWAY & HADAWAY"
+    },
+    {
+      "name": "HAMMERSMITH & FULHAM LAW CENTRE"
+    },
+    {
+      "name": "HETTS"
+    },
+    {
+      "name": "HILLINGDON LAW CENTRE"
+    },
+    {
+      "name": "HOPKINS SOLICITORS LLP"
+    },
+    {
+      "name": "HOWELLS LLP"
+    },
+    {
+      "name": "ISLINGTON LAW CENTRE"
+    },
+    {
+      "name": "KEOGHS AND NICHOLLS LINDSELL & HARRIS"
+    },
+    {
+      "name": "LAMBETH LAW CENTRE"
+    },
+    {
+      "name": "LDJ SOLICITORS"
+    },
+    {
+      "name": "LEADENHALL LAW GROUP"
+    },
+    {
+      "name": "LIVERPOOL CENTRAL CAB"
+    },
+    {
+      "name": "LIVERPOOL COMMUNITY ADVICE"
+    },
+    {
+      "name": "LUTON LAW CENTRE"
+    },
+    {
+      "name": "MEDWAY DISTRICT CAB"
+    },
+    {
+      "name": "MINTON MORRILL"
+    },
+    {
+      "name": "NORTH LANCASHIRE CAB"
+    },
+    {
+      "name": "NORTH SOMERSET CAB"
+    },
+    {
+      "name": "NORTHWOOD LAW PRACTISE"
+    },
+    {
+      "name": "NOTTINGHAM LAW CENTRE"
+    },
+    {
+      "name": "ROCHDALE LAW CENTRE"
+    },
+    {
+      "name": "ROW AND SCOTT"
+    },
+    {
+      "name": "SHELTER"
+    },
+    {
+      "name": "SHELTER CYMRU"
+    },
+    {
+      "name": "SHENTONS SOLCITORS AND MEDIATORS"
+    },
+    {
+      "name": "SHEPWAY CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "SOUTH WEST LAW"
+    },
+    {
+      "name": "SOUTH WEST LONDON LAW CENTRES"
+    },
+    {
+      "name": "SOUTHEND-ON-SEA CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "SSP LAW"
+    },
+    {
+      "name": "STAFFORD & STONE CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "STEPHENSONS LLP"
+    },
+    {
+      "name": "STEPHENSONS SOLICITORS LLP"
+    },
+    {
+      "name": "STOKE-ON-TRENT CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "SWAIN & CO"
+    },
+    {
+      "name": "SWAIN & CO SOLICITORS"
+    },
+    {
+      "name": "SWITALSKIS SOLICITORS LLP"
+    },
+    {
+      "name": "THE COMMUNITY LAW PARTNERSHIP"
+    },
+    {
+      "name": "THE RICHMOND PARTNERSHIP"
+    },
+    {
+      "name": "TURPIN AND MILLER SOLICITORS"
+    },
+    {
+      "name": "WALSALL CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "WATSON WOODHOUSE"
+    },
+    {
+      "name": "WILTSHIRE LAW CENTRE"
+    },
+    {
+      "name": "WOLVERHAMPTON CAB"
+    },
+    {
+      "name": "WORCESTER CAB"
+    }
+   ]
+  %}
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Contract ends</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for provider in providers %}
+        <tr>
+          <td><a href="brighton">{{ provider.name | title }}</a></td>
+          <td>{{ ['<span class="label--red">Flagged</span> Issue ABC', '<span class="label--red">Flagged</span> Issue DEF', 'Contract cancelled', 'Schedule update'] | random | safe }}</td>
+          <td>{{ ['12/10/2018', '12/11/2018', '05/09/2019', '14/11/2019', '09/04/2019'] | random }}</td>
+        </tr>
+      {% endfor %}
+      
+    </tbody>
+  </table>
+
+
+</main>
+
+{% endblock %}

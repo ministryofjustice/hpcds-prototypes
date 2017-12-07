@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Upload
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+
+      <form action="/sign-in" method="post" class="form">
+        
+        <h1 class="heading-large">Upload and check your data</h1>
+        
+        <table>
+          <thead>
+            <tr>
+              <th>File name</th>
+              <th>Status</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>HPCDS_Claim_123.xls</td>
+              <td><span style="display: inline-box; color: green; border: 2px solid green; padding: 2px 4px 0px 4px; font-weight: bold;">Valid data</span></td>
+              <td></td>
+              <td><a href="">Remove</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        
+
+        <div class="form-group" style="margin-top: 30px;">
+            <a href="email" class="button">Continue</a>
+        </div>
+
+      </form>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}

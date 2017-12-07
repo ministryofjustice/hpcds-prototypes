@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+
+
+        <div class="govuk-box-highlight">
+            
+          <h1 class="heading-xlarge">
+            Claim received
+          </h1>
+
+          <p class="font-large">
+            Your reference number is <br>
+            <strong class="bold">NOV2017PV2</strong>
+          </p>
+        </div>
+
+        <h2 class="heading-medium">Thank you</h2>
+
+        <p>We now have your claim for November 2017.</p>
+
+        <p>Email confirmation sent to: user51@provider3.com</p>  
+
+        <h2 class="heading-medium">What happens next</h2>
+        <p>We'll process your claim within 2 weeks and email you when we make payment.</p>
+        
+        <h2 class="heading-medium">
+        Claims Helpline
+        </h2>
+        
+        <address>
+            <p>
+                Email: <a href="mailto:pauline@hpcds.gov.uk">pauline@hpcds.gov.uk</a><br>
+                Telephone: 0121 600 6160<br>
+                Monday, Tuesday, Thursday, Friday 9am to 5pm<br>
+                Wednesday 10am to 5pm<br>
+                <a href="https://www.gov.uk/call-charges">Find out about call charges</a>
+            </p>
+        </address>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}
