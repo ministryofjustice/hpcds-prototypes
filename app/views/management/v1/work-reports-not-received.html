@@ -1,0 +1,491 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Claim for Housing Possession Court Duty
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="../v1/">Home</a></li>
+      <li>Work reports and payments</li>
+    </ol>
+  </div>
+
+  <h1 class="heading-large">Work Reports</h1>
+
+  <h2 class="heading-medium">December 2017</h2>
+  
+  <p>5 days remaining until work report submission date.</p>
+
+  <a href="#" class="button">Send reminder emails</a>
+
+  {% 
+    set providers = [
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Aberdare, Merthyr Tydfil, Pontypridd"
+  },
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Aberystwyth, Brecknock, Welshpool & Newtown"
+  },
+  {
+    "provider": "Wiltshire Law Centre",
+    "scheme": "Aldershot and Farnham, Basingstoke"
+  },
+  {
+    "provider": "Keoghs and Nicholls Lindsell & Harris",
+    "scheme": "Altrincham, Stockport"
+  },
+  {
+    "provider": "Hillingdon Law Centre",
+    "scheme": "Aylesbury, High Wycombe"
+  },
+  {
+    "provider": "Community Law Service",
+    "scheme": "Banbury"
+  },
+  {
+    "provider": "SSP Law",
+    "scheme": "Barnet"
+  },
+  {
+    "provider": "Howells LLP",
+    "scheme": "Barnsley"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Barnstaple, Torquay & Newton Abbott"
+  },
+  {
+    "provider": "Cumbria Law Centre",
+    "scheme": "Barrow in Furness, Carlisle, Kendal"
+  },
+  {
+    "provider": "Medway District CAB",
+    "scheme": "Basildon"
+  },
+  {
+    "provider": "South West Law",
+    "scheme": "Bath, Bristol"
+  },
+  {
+    "provider": "BURD WARD SOLICITORS",
+    "scheme": "Birkenhead"
+  },
+  {
+    "provider": "The Community Law Partnership",
+    "scheme": "Birmingham"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Blackburn, Burnley"
+  },
+  {
+    "provider": "Keoghs and Nicholls Lindsell & Harris",
+    "scheme": "Blackpool, Preston"
+  },
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Blackwood, Newport (Gwent), Pontypool"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Bodmin, Truro"
+  },
+  {
+    "provider": "Bolton CAB",
+    "scheme": "Bolton"
+  },
+  {
+    "provider": "Community Law Service",
+    "scheme": "Boston, Lincoln"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Bournemouth, Weymouth & Dorchester"
+  },
+  {
+    "provider": "Edwards Duthie",
+    "scheme": "Bow"
+  },
+  {
+    "provider": "Foundation",
+    "scheme": "Bradford, Keighley, Skipton"
+  },
+  {
+    "provider": "Hammersmith & Fulham Law Centre",
+    "scheme": "Brentford"
+  },
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Bridgend, Cardiff"
+  },
+  {
+    "provider": "Brighton Housing Trust",
+    "scheme": "Brighton"
+  },
+  {
+    "provider": "Greenwich Housing Rights",
+    "scheme": "Bromley"
+  },
+  {
+    "provider": "Bury Law Centre",
+    "scheme": "Bury"
+  },
+  {
+    "provider": "Leadenhall Law Group",
+    "scheme": "Bury St Edmunds"
+  },
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Caernarfon, Conwy & Colwyn, Llangefni"
+  },
+  {
+    "provider": "Community Law Service",
+    "scheme": "Cambridge"
+  },
+  {
+    "provider": "Shepway Citizens Advice Bureau",
+    "scheme": "Canterbury"
+  },
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Carmarthen, Haverfordwest, Llanelli"
+  },
+  {
+    "provider": "Duncan Lewis",
+    "scheme": "Central London"
+  },
+  {
+    "provider": "Gloucester Law Centre",
+    "scheme": "Cheltenham, Gloucester"
+  },
+  {
+    "provider": "Keoghs and Nicholls Lindsell & Harris",
+    "scheme": "Chester, Crewe, Macclesfield"
+  },
+  {
+    "provider": "Derbyshire Law Centre",
+    "scheme": "Chesterfield"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Chichester, Horsham, Worthing"
+  },
+  {
+    "provider": "Wiltshire Law Centre",
+    "scheme": "Chippenham, Salisbury, Swindon"
+  },
+  {
+    "provider": "Islington Law Centre",
+    "scheme": "Clerkenwell & Shoreditch"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Colchester"
+  },
+  {
+    "provider": "Coventry Law Centre",
+    "scheme": "Coventry"
+  },
+  {
+    "provider": "South West London Law Centres",
+    "scheme": "Croydon"
+  },
+  {
+    "provider": "Clark Willis",
+    "scheme": "Darlington"
+  },
+  {
+    "provider": "Medway District CAB",
+    "scheme": "Dartford"
+  },
+  {
+    "provider": "Direct Help & Advice",
+    "scheme": "Derby"
+  },
+  {
+    "provider": "Fusion Housing Ltd",
+    "scheme": "Dewsbury, Huddersfield"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Doncaster"
+  },
+  {
+    "provider": "Wolverhampton CAB",
+    "scheme": "Dudley"
+  },
+  {
+    "provider": "The Richmond Partnership",
+    "scheme": "Durham, Bishop Auckland, Consett"
+  },
+  {
+    "provider": "Brighton Housing Trust",
+    "scheme": "Eastbourne"
+  },
+  {
+    "provider": "Edwards Duthie",
+    "scheme": "Edmonton"
+  },
+  {
+    "provider": "Gateshead Citizens Advice Bureau",
+    "scheme": "Gateshead"
+  },
+  {
+    "provider": "Hetts",
+    "scheme": "Grimsby, Scunthorpe"
+  },
+  {
+    "provider": "Brighton Housing Trust",
+    "scheme": "Hastings, Lewes"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Hertford, St Albans, Watford"
+  },
+  {
+    "provider": "Howells LLP",
+    "scheme": "Hull"
+  },
+  {
+    "provider": "Community Law Service",
+    "scheme": "Kettering, Wellingborough, Northampton"
+  },
+  {
+    "provider": "Worcester CAB",
+    "scheme": "Kidderminster, Redditch, Worcester"
+  },
+  {
+    "provider": "South West London Law Centres",
+    "scheme": "Kingston"
+  },
+  {
+    "provider": "Lambeth Law Centre",
+    "scheme": "Lambeth"
+  },
+  {
+    "provider": "North Lancashire CAB",
+    "scheme": "Lancaster"
+  },
+  {
+    "provider": "Minton Morrill",
+    "scheme": "Leeds"
+  },
+  {
+    "provider": "Community Advice and Law Service",
+    "scheme": "Leicester"
+  },
+  {
+    "provider": "Liverpool Central CAB",
+    "scheme": "Liverpool"
+  },
+  {
+    "provider": "Leadenhall Law Group",
+    "scheme": "Lowestoft, Great Yarmouth"
+  },
+  {
+    "provider": "Luton Law Centre",
+    "scheme": "Luton"
+  },
+  {
+    "provider": "Medway District CAB",
+    "scheme": "Maidstone, Medway"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Manchester"
+  },
+  {
+    "provider": "Hopkins Solicitors LLP",
+    "scheme": "Mansfield"
+  },
+  {
+    "provider": "Northwood Law Practise",
+    "scheme": "Milton Keynes"
+  },
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Mold, Rhyl, Wrexham"
+  },
+  {
+    "provider": "Row and Scott",
+    "scheme": "Morpeth & Berwick, Alnwick"
+  },
+  {
+    "provider": "Shelter Cymru",
+    "scheme": "Neath & Port Talbot, Swansea"
+  },
+  {
+    "provider": "Row and Scott",
+    "scheme": "Newcastle"
+  },
+  {
+    "provider": "Hadaway & Hadaway",
+    "scheme": "North Shields"
+  },
+  {
+    "provider": "Leadenhall Law Group",
+    "scheme": "Norwich, Kings Lynn"
+  },
+  {
+    "provider": "Nottingham Law Centre",
+    "scheme": "Nottingham"
+  },
+  {
+    "provider": "Rochdale Law Centre",
+    "scheme": "Oldham"
+  },
+  {
+    "provider": "Turpin and Miller Solicitors",
+    "scheme": "Oxford"
+  },
+  {
+    "provider": "Community Law Service",
+    "scheme": "Peterborough"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Plymouth"
+  },
+  {
+    "provider": "Swain & Co Solicitors",
+    "scheme": "Portsmouth"
+  },
+  {
+    "provider": "EDWARDS DUTHIE SOLICITORS",
+    "scheme": "Romford"
+  },
+  {
+    "provider": "LDJ solicitors",
+    "scheme": "Rugby, Nuneaton"
+  },
+  {
+    "provider": "Foundation",
+    "scheme": "Scarborough, York, Bridlington, Whitby"
+  },
+  {
+    "provider": "Howells LLP",
+    "scheme": "Sheffield"
+  },
+  {
+    "provider": "Shelter",
+    "scheme": "Slough"
+  },
+  {
+    "provider": "Hadaway & Hadaway",
+    "scheme": "South Shields"
+  },
+  {
+    "provider": "Swain & Co",
+    "scheme": "Southampton"
+  },
+  {
+    "provider": "Southend-on-Sea Citizens Advice Bureau",
+    "scheme": "Southend"
+  },
+  {
+    "provider": "Stephensons LLP",
+    "scheme": "St Helens"
+  },
+  {
+    "provider": "Stafford & Stone Citizens Advice Bureau",
+    "scheme": "Stafford"
+  },
+  {
+    "provider": "Stoke-on-Trent Citizens Advice Bureau",
+    "scheme": "Stoke On Trent"
+  },
+  {
+    "provider": "Ben Hoare Bell LLP",
+    "scheme": "Sunderland"
+  },
+  {
+    "provider": "ALLETSONS",
+    "scheme": "Taunton, Yeovil"
+  },
+  {
+    "provider": "Watson Woodhouse",
+    "scheme": "Teesside"
+  },
+  {
+    "provider": "Wolverhampton CAB",
+    "scheme": "Telford"
+  },
+  {
+    "provider": "Shepway Citizens Advice Bureau",
+    "scheme": "Thanet"
+  },
+  {
+    "provider": "Clarke Kiernan",
+    "scheme": "Tunbridge Wells"
+  },
+  {
+    "provider": "Medway District CAB",
+    "scheme": "Tunbridge Wells"
+  },
+  {
+    "provider": "Hillingdon Law Centre",
+    "scheme": "Uxbridge"
+  },
+  {
+    "provider": "Switalskis Solicitors LLP",
+    "scheme": "Wakefield"
+  },
+  {
+    "provider": "Walsall Citizens Advice Bureau",
+    "scheme": "Walsall"
+  },
+  {
+    "provider": "Hammersmith & Fulham Law Centre",
+    "scheme": "Wandsworth"
+  },
+  {
+    "provider": "South West London Law Centres",
+    "scheme": "Wandsworth"
+  },
+  {
+    "provider": "North Somerset CAB",
+    "scheme": "Weston Super Mare"
+  },
+  {
+    "provider": "Cumbria Law Centre",
+    "scheme": "Whitehaven"
+  },
+  {
+    "provider": "Stephensons Solicitors LLP",
+    "scheme": "Wigan"
+  },
+  {
+    "provider": "David Long Solicitors",
+    "scheme": "Willesden"
+  },
+  {
+    "provider": "Shentons Solcitors and Mediators",
+    "scheme": "Winchester"
+  },
+  {
+    "provider": "Wolverhampton CAB",
+    "scheme": "Wolverhampton"
+  },
+  {
+    "provider": "Greenwich Housing Rights",
+    "scheme": "Woolwich"
+  }
+ ]
+%}
+
+  <h2 class="heading-medium">51 work reports not received from these schemes</h2>
+  <ul class="list list-bullet">
+  {% for provider in providers %}
+  <li>{{ provider.scheme }} ({{ provider.provider }})</li>
+  {% endfor %}
+  </ul>
+</main>
+
+{% endblock %}
