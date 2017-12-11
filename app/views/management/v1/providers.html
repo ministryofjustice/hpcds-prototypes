@@ -15,7 +15,10 @@
     </ol>
   </div>
 
-  <h1 class="heading-xlarge">Providers</h1>
+  <div class="grid-ro" style="overflow: hidden;">
+    <h1 class="heading-xlarge" style="float: left;">Providers</h1>
+    <a href="#" class="button" style="vertical-align: bottom;margin-top: 29px;margin-left: 34px;">Add new provider</a>
+  </div>
 
   <ul class="grid-row">
     <li class="card column-one-quarter">
@@ -265,7 +268,7 @@
       {% for provider in providers %}
         <tr>
           <td><a href="brighton">{{ provider.name | title }}</a></td>
-          <td>{{ ['<span class="label--red">Flagged</span> Issue ABC', '<span class="label--red">Flagged</span> Issue DEF', 'Contract cancelled', 'Schedule update'] | random | safe }}</td>
+          <td>{{ ['<span class="label--red">Flagged</span> Issue ABC', '<span class="label--red">Flagged</span> Issue DEF', 'Contract cancelled', 'Schedule update', '', '', ''] | random | safe }}</td>
           <td>{{ ['12/10/2018', '12/11/2018', '05/09/2019', '14/11/2019', '09/04/2019'] | random }}</td>
         </tr>
       {% endfor %}
