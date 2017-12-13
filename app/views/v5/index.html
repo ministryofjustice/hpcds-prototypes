@@ -1,56 +1,107 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  LAA Online Portal
+  Start page example
 {% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
 
-    <div class="grid-row">
-        <div class="column-two-thirds">
-            <h1 class="heading-xlarge">LAA Online Portal</h1>
-        </div>
+    <div class="phase-banner">
+        <p>
+            <strong class="phase-tag">ALPHA</strong>
+            <span>This is a new service – your <a href="https://www.surveymonkey.co.uk/r/Refundsfeedback" rel="external" target="_blank">feedback</a> will help us to improve it.</span>
+        </p>
     </div>
 
     <div class="grid-row">
         <div class="column-two-thirds">
-            <p>To sign in to the Online Portal please enter your username and password.</p>
-            <p>By logging into this Portal you accept the <a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" target="_blank">Terms and Conditions</a>.</p>
-            
-            <form id="loginData">
+            <h1 class="heading-xlarge">
+            Claim for HPCDS
+            </h1>
 
-                <div class="form-group">
-                    <label class="form-label" for="username">Username:</label>
-                    <input class="form-control" type="text" name="username" id="username">
-                </div>
-                <div class="form-group">
-                    <label class="form-label" for="password">Password:</label>
-                    <input type="password" class="form-control" name="password" id="password" autocomplete="off">
-                </div>
-                
-                
-                <div class="form-group">
-                    <a class="button" href="portal-logged-in">Login</a>
-                </div>
-                
-                <p><a href="#">Forgotten your password?</a></p>
-                                         
-            </form>
-		
-        </div>	
-        <div class="column-one-third">
-            <div id="global-header-bar"></div>
-            <h2 class="heading-small">Guidance</h2>
-            <ul>
-                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAALogin - Guidance');return true;" target="_blank">Terms and Conditions</a></li>
-                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAALogin - Guidance');return true;" target="_blank">List of Services</a></li>
-                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAALogin - Guidance');return true;" target="_blank">Help</a></li>
-            </ul>
-            <!--  Service Status -->
-            <iframe id="scaled-frame" src="https://laa-dashboard.firebaseapp.com/" height="600" width="285" frameborder="0" scrolling="no"></iframe>
-        </div>
+    <aside class="part-navigation-container" role="complementary">
+        <nav role="navigation" class="grid-row part-navigation" aria-label="Pages in this guide">
+            <ol class="column-half">
+                <li>
+                <a href="#">Overview</a>
+                </li>
+                <li>
+                Submissions
+                </li>
+                <li>
+                <a href="#">Payments</a>
+                </li>
+            </ol>
+        </nav>
+
+    </aside>
+          
+    <h1 class="heading-large">
+    2. Submissions
+    </h1>
+          
+            
+    <div class="govuk-govspeak direction-ltr rich-govspeak disable-youtube">
+    <p>All submissions must be made in a timely manner and as such no claims should be submitted after 6 
+        months from the date the client received help at court.
+    </p>
+
+    <p>If the HPCDS fee has already been claimed before the legal help matter is opened then you should 
+        notify <a href="mailto:hpcds@legalaid.gsi.gov.uk ">hpcds@legalaid.gsi.gov.uk</a>
+        of the need to amend the report. The
+        Provider Assurance team will retrospectively tick the ‘Legal Help’ field in the relevant report,
+        make a note in the ‘notes’ field and recoup the fee paid. You should report the Legal Help
+        claim in the usual way.
+    </p>
+
+    <p>Please note that HPCDS cases which go on to receive Legal Help will still be counted as
+            HPCDS acts of assistance for the purposes of your allocation and performance.</p>
+
+    <p>Payments are triggered by our receipt of fully completed monthly reporting spreadsheet
+    (HPCDS Contract Report Form v1.4) on or before their respective due date. Payment will be
+    delayed if reports are not received on time. Guidance is available at Annex 4 which offers
+    help with how to complete the monthly reporting spreadsheet.</p>
+    
+    
+    <h2 class="heading-medium">Submit online</h2>
+    
+    <p>You can <a href="start">submit your claim online</a>. The online service will:</p>
+    
+    <ul class="list-bullet">
+        <li>reminder and confirmation notifications</li>
+        <li>check the data for errors</li>
+        <li>tell you how much and when to expect your payment</li>
+        <li>display historical claims</li>
+    </ul>
+
+    </div>
+
+    <h2 class="heading-medium">Submit via email</h2>
+    <p>You can submit via email. This is a more basic service and you should expect longer payment periods.</p>
+    
+    <p>Send your contract report form to <a href="mailto:hpcdsreports@legalaid.gsi.gov.uk ">hpcdsreports@legalaid.gsi.gov.uk</a></p>
+
+</div>
+    <div class="column-third add-title-margin">
+        <aside class="govuk-related-items" data-module="track-click" role="complementary">
+            <h2 class="heading-medium">
+                HPCDS
+            </h2>
+
+            <nav role="navigation">
+                <ul>
+                    <li><a href="/apply-first-adult-passport">When will the latest contracts be announced?</a></li>
+                    <li><a href="/apply-first-adult-passport">List of fees</a></li>
+                    <li><a href="/apply-first-adult-passport">Delivery of the service</a></li>
+                    <li><a href="/apply-first-adult-passport">Maintaining service coverage</a></li>
+                    <li><a href="/apply-first-adult-passport">Request schedule changes</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+    </div>    
     </div>
 </main>
 

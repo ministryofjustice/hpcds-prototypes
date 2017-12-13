@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Claim for Housing Possession Court Duty
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">Current billing cycle: December 2017</h1>
+
+  <ul class="grid-row">
+    <li class="card column-one-third">
+      <a href="claims-outstanding" class="card__body">
+        <span class="bold-xlarge">14</span>
+        <span class="bold-small">claims outstanding</span>
+      </a>
+      <div class="card__footer">
+        <span class="font-small">How many certificates sponsorship have left to use.</span>
+      </div>
+    </li>
+    <li class="card column-one-third">
+      <a href="#0" class="card__body">
+        <span class="bold-xlarge">30</span>
+        <span class="bold-small">claims received</span>
+      </a>
+      <div class="card__footer">
+        <span class="font-small">This is how many certificates sponsorship have used.</span>
+      </div>
+    </li>
+    <li class="card column-one-third">
+      <a href="claims-processed" class="card__body">
+        <span class="bold-xlarge">11</span>
+        <span class="bold-small">claims processed</span>
+      </a>
+      <div class="card__footer">
+        <span class="font-small">This is how many certificates sponsorship have used.</span>
+      </div>
+    </li>
+  </ul>
+
+  <h2 class="heading-medium">Next steps</h2>
+  <ul class="list list-bullet">
+    <li>Process all received claims before ending billing cycle</li>
+    <li>End billing cycle</li>
+  </ul>
+</main>
+
+{% endblock %}

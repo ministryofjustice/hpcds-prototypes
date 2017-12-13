@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  LAA Online Portal
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">LAA Online Portal</h1>
+        </div>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <p>To sign in to the Online Portal please enter your username and password.</p>
+            <p>By logging into this Portal you accept the <a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" target="_blank">Terms and Conditions</a>.</p>
+            
+            <div class="panel panel-border-wide">
+              <p>
+                After login, you will be redirected to the HPCDS service.
+              </p>
+            </div>
+
+            <form id="loginData">
+
+                <div class="form-group">
+                    <label class="form-label" for="username">Username:</label>
+                    <input class="form-control" type="text" name="username" id="username">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Password:</label>
+                    <input type="password" class="form-control" name="password" id="password" autocomplete="off">
+                </div>
+                
+                
+                <div class="form-group">
+                    <a class="button" href="one-time-code">Login</a>
+                </div>
+                
+                <p><a href="#">Forgotten your password?</a></p>
+                                         
+            </form>
+		
+        </div>	
+        <div class="column-one-third">
+            <div id="global-header-bar"></div>
+            <h2 class="heading-small">Guidance</h2>
+            <ul>
+                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAALogin - Guidance');return true;" target="_blank">Terms and Conditions</a></li>
+                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAALogin - Guidance');return true;" target="_blank">List of Services</a></li>
+                <li><a href="https://www.gov.uk/government/publications/laa-online-portal-help-and-information" onclick="trackOutboundLink('LAALogin - Guidance');return true;" target="_blank">Help</a></li>
+            </ul>
+            <!--  Service Status -->
+            <iframe id="scaled-frame" src="https://laa-dashboard.firebaseapp.com/" height="600" width="285" frameborder="0" scrolling="no"></iframe>
+        </div>
+    </div>
+</main>
+
+{% endblock %}

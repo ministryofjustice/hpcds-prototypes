@@ -1,0 +1,267 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="phase-banner">
+      <p>
+          <strong class="phase-tag">ALPHA</strong>
+          <span>This is a new service – your <a href="https://www.surveymonkey.co.uk/r/Refundsfeedback" rel="external" target="_blank">feedback</a> will help us to improve it.</span>
+      </p>
+  </div>
+
+  {% 
+    set providers = [
+    {
+      "name": "ALLETSONS"
+    },
+    {
+      "name": "BEN HOARE BELL LLP"
+    },
+    {
+      "name": "BOLTON CAB"
+    },
+    {
+      "name": "BRIGHTON HOUSING TRUST"
+    },
+    {
+      "name": "BURD WARD SOLICITORS"
+    },
+    {
+      "name": "BURY LAW CENTRE"
+    },
+    {
+      "name": "CLARK WILLIS"
+    },
+    {
+      "name": "CLARKE KIERNAN"
+    },
+    {
+      "name": "COMMUNITY ADVICE AND LAW SERVICE"
+    },
+    {
+      "name": "COMMUNITY LAW SERVICE"
+    },
+    {
+      "name": "COVENTRY LAW CENTRE"
+    },
+    {
+      "name": "CUMBRIA LAW CENTRE"
+    },
+    {
+      "name": "DAVID LONG SOLICITORS"
+    },
+    {
+      "name": "DERBYSHIRE LAW CENTRE"
+    },
+    {
+      "name": "DIRECT HELP & ADVICE"
+    },
+    {
+      "name": "DUNCAN LEWIS"
+    },
+    {
+      "name": "EDWARDS DUTHIE"
+    },
+    {
+      "name": "EDWARDS DUTHIE SOLICITORS"
+    },
+    {
+      "name": "FOUNDATION"
+    },
+    {
+      "name": "FUSION HOUSING LTD"
+    },
+    {
+      "name": "GATESHEAD CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "GLOUCESTER LAW CENTRE"
+    },
+    {
+      "name": "GREENWICH HOUSING RIGHTS"
+    },
+    {
+      "name": "HADAWAY & HADAWAY"
+    },
+    {
+      "name": "HAMMERSMITH & FULHAM LAW CENTRE"
+    },
+    {
+      "name": "HETTS"
+    },
+    {
+      "name": "HILLINGDON LAW CENTRE"
+    },
+    {
+      "name": "HOPKINS SOLICITORS LLP"
+    },
+    {
+      "name": "HOWELLS LLP"
+    },
+    {
+      "name": "ISLINGTON LAW CENTRE"
+    },
+    {
+      "name": "KEOGHS AND NICHOLLS LINDSELL & HARRIS"
+    },
+    {
+      "name": "LAMBETH LAW CENTRE"
+    },
+    {
+      "name": "LDJ SOLICITORS"
+    },
+    {
+      "name": "LEADENHALL LAW GROUP"
+    },
+    {
+      "name": "LIVERPOOL CENTRAL CAB"
+    },
+    {
+      "name": "LIVERPOOL COMMUNITY ADVICE"
+    },
+    {
+      "name": "LUTON LAW CENTRE"
+    },
+    {
+      "name": "MEDWAY DISTRICT CAB"
+    },
+    {
+      "name": "MINTON MORRILL"
+    },
+    {
+      "name": "NORTH LANCASHIRE CAB"
+    },
+    {
+      "name": "NORTH SOMERSET CAB"
+    },
+    {
+      "name": "NORTHWOOD LAW PRACTISE"
+    },
+    {
+      "name": "NOTTINGHAM LAW CENTRE"
+    },
+    {
+      "name": "ROCHDALE LAW CENTRE"
+    },
+    {
+      "name": "ROW AND SCOTT"
+    },
+    {
+      "name": "SHELTER"
+    },
+    {
+      "name": "SHELTER CYMRU"
+    },
+    {
+      "name": "SHENTONS SOLCITORS AND MEDIATORS"
+    },
+    {
+      "name": "SHEPWAY CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "SOUTH WEST LAW"
+    },
+    {
+      "name": "SOUTH WEST LONDON LAW CENTRES"
+    },
+    {
+      "name": "SOUTHEND-ON-SEA CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "SSP LAW"
+    },
+    {
+      "name": "STAFFORD & STONE CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "STEPHENSONS LLP"
+    },
+    {
+      "name": "STEPHENSONS SOLICITORS LLP"
+    },
+    {
+      "name": "STOKE-ON-TRENT CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "SWAIN & CO"
+    },
+    {
+      "name": "SWAIN & CO SOLICITORS"
+    },
+    {
+      "name": "SWITALSKIS SOLICITORS LLP"
+    },
+    {
+      "name": "THE COMMUNITY LAW PARTNERSHIP"
+    },
+    {
+      "name": "THE RICHMOND PARTNERSHIP"
+    },
+    {
+      "name": "TURPIN AND MILLER SOLICITORS"
+    },
+    {
+      "name": "WALSALL CITIZENS ADVICE BUREAU"
+    },
+    {
+      "name": "WATSON WOODHOUSE"
+    },
+    {
+      "name": "WILTSHIRE LAW CENTRE"
+    },
+    {
+      "name": "WOLVERHAMPTON CAB"
+    },
+    {
+      "name": "WORCESTER CAB"
+    }
+   ]
+  %}
+
+  <form method="post" class="form">
+    <input type="hidden" name="crumb" value="">
+    <h1 class="heading-large"><span id="title">Check that you can use this service</span></h1>
+
+    <div class="text">
+        <h2 class="heading-medium">1. You need to be set up on the system</h2>
+
+        <details class="form-group">
+            <summary><span class="summary">Providers who can use this service</span></summary>
+            <div class="panel panel-border-narrow">
+                <ul class="list list-bullet">
+                    {% for provider in providers %}
+                    <li>{{ provider.name | title }}</li>
+                  {% endfor %}
+                </ul>
+            </div>
+        </details>
+        <p>If your provider has not been set up, please carry on with your normal way of sending monthly reports.</p>
+
+        <h2 class="heading-medium">2. Your data must be in the right format</h2>
+
+        <p>Make sure your data is in a CSV file that meets the <a href="court-allowed-values">data formatting rules</a> and uses only the allowed values.</p>
+
+        <p>You can use the system to check data file format without doing a final submission.</p>
+
+        <h2 class="heading-medium">3. You'll need to login to the LAA portal</h2>
+
+        <p>We’ll send you a single-use confirmation code after you upload your data.</p>
+
+        <!-- Primary button -->
+        
+        <a href="login" class="button">Continue</a>
+        
+    </div>
+  </form>
+
+
+
+</main>
+
+{% endblock %}

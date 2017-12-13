@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <div class="phase-banner">
+        <p>
+            <strong class="phase-tag">ALPHA</strong>
+            <span>This is a new service – your <a href="https://www.surveymonkey.co.uk/r/Refundsfeedback" rel="external" target="_blank">feedback</a> will help us to improve it.</span>
+        </p>
+    </div>
+
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">
+            Claim for Housing Possession Court Duty 
+            </h1>
+          
+     
+            <p>You can claim for work done under the Housing Possession Court Duty Scheme.</p>
+
+            <a href="logged-out" class="button button-start">Start now</a>
+
+        <h2 class="heading-medium">What you'll need</h2>
+
+        <ul class="list list-bullet">
+            <li>About 2 minutes</li>
+            <li>LAA portal credentials</li>
+            <li>Populated contract report form spreadsheet</li>
+        </ul>
+
+        <h2 class="heading-medium">One claim per month per scheme</h2>
+        <p>Make one claim per month per scheme. Court records will be checked for all claims paid.</p>
+
+        <h2 class="heading-medium">Travel disbursement</h2>
+        <p>You can claim travel disbursements if you visit alternative hearing locations. Claims are only valid
+            for certain originating courts. You need to keep travel receipts for 6 years.</p>
+
+
+    </div>
+    <div class="column-third add-title-margin">
+        <aside class="govuk-related-items" data-module="track-click" role="complementary">
+            <h2 class="heading-medium">
+                HPCDS
+            </h2>
+
+            <nav role="navigation">
+                <ul>
+                    <li><a href="#">Guide to travel disbursements</a></li>
+                    <li><a href="#">Download contract report form</a></li>
+                    <li><a href="#">When can I make a claim?</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+    </div>    
+    </div>
+</main>
+
+{% endblock %}
