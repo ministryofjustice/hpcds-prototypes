@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-full">
+        
+        <div class="grid-row">
+          <div class="column-two-thirds">
+            <h1 class="heading-large">Howells LLP</h1>
+            <p><span class="bold">Account number: </span> 2M282N | <span class="bold">Scheme: </span> Sheffield</p>
+          </div>
+          <div class="column-one-third">
+            <p style="text-align: right">
+              You are logged in as <a href="#">User 51</a><br>
+              Last visit 19.01.2018
+            </p>
+          
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="flash-card-moj" style="padding: 30px;">
+          <h2 class="bold-medium">Contract report form</h2>
+          <br>
+        <div class="media">
+          <span class="media-figure hod-calendar side-space icon-medium"></span>
+          <div class="media-body">
+            <p class="bold-small" style="margin: 0;">
+              <span class="text-secondary">Month 9</span><br>
+              You have missed the 20 Jan deadline.<br><a href="prepare-late">Submit Month 9 as a   late claim</a>
+            </p>
+          </div>
+        </div>
+
+        <hr style="margin: 20px 0;">
+
+        <div class="media">
+          <span class="media-figure hod-checkmark side-space icon-medium"></span>
+          <div class="media-body">
+            <p class="bold-small">
+                <span class="text-secondary">Month 8</span><br>
+                Filed with LAA
+            </p>
+              <p>Your contract report form has been successfully filed with LAA.</p>
+    
+            <p><span class="bold-small">Claim total:</span> £2,301.32</p>
+          </div>
+        </div>
+      </div> 
+      
+      </div>
+      <div class="column-one-third">
+          <div class="flash-card-mdoj">
+            <h2 class="bold-medium">Year-to-date</h2>
+            
+            <table>
+              <tbody>
+                <tr>
+                  <th>Total claim</th>
+                  <td>£40,324</td>
+                </tr>
+                <tr>
+                  <th>Total payable cases</th>
+                  <td>763</td>
+                </tr>
+                <tr>
+                    <th>Total to legal aid</th>
+                    <td>54</td>
+                  </tr>
+                <tr>
+                  <th>Total nil sessions</th>
+                  <td>54</td>
+                </tr>
+              </tbody>
+            </table>
+  
+          </div>
+    </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="column-full">
+
+        <h2 class="heading-large">History</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Date</th>
+              <th class="numeric">Claim</th>
+              <th class="numeric">Payable cases</th>
+              <th class="numeric">Went to legal aid</th>
+              <th class="numeric">Nil sessions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="">Month 8</a></td>
+              <td>18 Dec 2017</td>
+              <td class="numeric">£2,301.32</td>
+              <td class="numeric">43</td>
+              <td class="numeric">6</td>
+              <td class="numeric">3</td>
+            </tr>
+            <tr>
+              <td><a href="">Month 7</a></td>
+              <td>20 Nov 2017</td>
+              <td class="numeric">£1,472.32</td>
+              <td class="numeric">23</td>
+              <td class="numeric">6</td>
+              <td class="numeric">3</td>
+            </tr>
+            <tr>
+              <td><a href="">Month 6</a></td>
+              <td>14 Oct 2017</td>
+              <td class="numeric">£2,301.32</td>
+              <td class="numeric">43</td>
+              <td class="numeric">7</td>
+              <td class="numeric">0</td>
+            </tr>
+            <tr>
+              <td><a href="">Month 5</a></td>
+              <td>19 Sep 2017</td>
+              <td class="numeric">£2,120.32</td>
+              <td class="numeric">41</td>
+              <td class="numeric">2</td>
+              <td class="numeric">1</td>
+            </tr>
+            <tr>
+              <td><a href="">Month 4</a></td>
+              <td>18 Aug 2017</td>
+              <td class="numeric">£2,928.32</td>
+              <td class="numeric">49</td>
+              <td class="numeric">4</td>
+              <td class="numeric">5</td>
+            </tr>
+            <tr>
+              <td><a href="">Month 3</a></td>
+              <td>19 Jul 2017</td>
+              <td class="numeric">£3,512.54</td>
+              <td class="numeric">53</td>
+              <td class="numeric">6</td>
+              <td class="numeric">6</td>
+            </tr>
+            <tr>
+              <td><a href="">Month 2</a></td>
+              <td>18 Jun 2017</td>
+              <td class="numeric">£1,945.54</td>
+              <td class="numeric">33</td>
+              <td class="numeric">6</td>
+              <td class="numeric">1</td>
+            </tr>
+            <tr>
+              <td><a href="">Month 1</a></td>
+              <td>16 May 2017</td>
+              <td class="numeric">£948.32</td>
+              <td class="numeric">12</td>
+              <td class="numeric">6</td>
+              <td class="numeric">3</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+
+</main>
+
+{% endblock %}

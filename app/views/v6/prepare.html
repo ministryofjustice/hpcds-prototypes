@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-full">
+        <h1 class="heading-large">Prepare Month 9 claim</h1>
+    </div>
+
+    <div class="column-two-thirds">
+
+      <p><span class="bold">Firm: </span> Howells LLP | <span class="bold">Account number: </span> 2M282N | <span class="bold">Scheme: </span> Sheffield</p>
+
+      <div class="panel panel-border-wide">
+        
+        <p>
+          This period is for claims between 1 to 31 December.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+    
+      <h1 class="heading-medium">Upload and check your contract report form</h1>
+      
+      <div class="form-group">
+          <a href="upload" class="button button-secondary">Choose spreadsheet</a>
+      </div>
+
+      <table>
+          <thead>
+            <tr>
+              <th>File name</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2">Upload at least one file to continue</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <a class="button" disabled="disabled" aria-disabled="true" style="margin-top: 30px;">Continue</a>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

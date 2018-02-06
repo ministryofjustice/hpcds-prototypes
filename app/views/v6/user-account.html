@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+      <h1 class="heading-xlarge">User account</h1>
+         
+      <dl class="govuk-check-your-answers cya-questions-short">
+          <div>
+            <dt class="cya-question">
+                Contact Name
+            </dt>
+            <dd class="cya-answer">
+                Charlotte Smith
+            </dd>
+          </div>
+        <div>
+          <dt class="cya-question">
+              Provider
+          </dt>
+          <dd class="cya-answer">
+              Perry Mason
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+              Address
+          </dt>
+          <dd class="cya-answer">
+              12 Ham Street, London, EK23 56T
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+              Phone
+          </dt>
+          <dd class="cya-answer">
+              020 8123 4859
+          </dd>
+        </div>
+        <div>
+          <dt class="cya-question">
+              Email
+          </dt>
+          <dd class="cya-answer">
+              csmith@perrymason.com
+          </dd>
+        </div>
+      </dl>
+
+    </div>
+    
+  </div>
+
+</main>
+
+{% endblock %}

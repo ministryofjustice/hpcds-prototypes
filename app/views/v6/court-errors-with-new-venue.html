@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+    
+      <a href="" class="link-back">Back to corrections list</a>
+
+      <h2 class="heading-medium">Court errors</h2>
+
+      <table class="align-top">
+        <thead>
+          <tr>
+            <th>Line number</th>
+            <th>Error</th>
+            <th>Your data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>Unrecognised</td>
+            <td>Merthyr</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>Missing</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+    
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Allowed venues</h2>
+
+      <p><a href="register-ach-venue">Register an alternative court hearing venue</a></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Venue name</th>
+            <th>Listed on schedule</th>
+            <th>Within scheme area</th>
+            <th>Verified by LAA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Abercynon Village Hall</td>
+            <td>No</td>
+            <td>No</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Merthyr Tydfil</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td><span class="media-figure hod-checkmark side-space icon-medium"></span></td>
+          </tr>
+          <tr>
+              <td>Pengam Community Centre</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td></td>
+            </tr>
+          <tr>
+            <td>Pontypridd</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td><span class="media-figure hod-checkmark side-space icon-medium"></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+  
+</main>
+
+{% endblock %}

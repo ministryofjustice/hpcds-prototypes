@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-full">
+        <h1 class="heading-large">Prepare Month 9 claim</h1>
+        
+    </div>
+
+    <div class="column-full">
+        <p><span class="bold">Firm: </span> Shelter Cymru | <span class="bold">Account number: </span> 2M282N | <span class="bold">Scheme: </span> Aberdare, Merthyr Tydfil, Pontypridd</p>
+
+      <div class="panel panel-border-wide">
+            
+          <p>
+            <span class="bold-small">Month 9 period</span><br>
+            This is for claims between 1 to 31 December.
+          </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="column-full">
+    
+      <h1 class="heading-medium">Upload and check your contract report form</h1>
+      
+      <div class="form-group">
+          <a href="landing-2" class="button button-secondary">Choose spreadsheet</a>
+      </div>
+
+      <table>
+          <thead>
+            <tr>
+              <th>File name</th>
+              <th>Status</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>HPCDS_Jan_2018_Claim.xls</td>
+                <td><span style="display: inline-box; color: red; border: 2px solid red; padding: 2px 4px 0px 4px; font-weight: bold;">Data error</span></td>
+                <td><a href="corrections">Show corrections</a></td>
+                <td><a href="">Remove</a></td>
+              </tr>
+          </tbody>
+        </table>
+
+        <a class="button" disabled="disabled" aria-disabled="true" style="margin-top: 30px;">Continue</a>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

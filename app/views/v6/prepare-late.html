@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <form>
+        <div class="form-group">
+          <fieldset>
+      
+            <legend>
+              <h1 class="heading-large">What is the reason for the late submission of month 9 claim?</h1>
+            </legend>
+      
+            <div class="multiple-choice">
+              <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+              <label for="radio-1">Staff sickness</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-2" type="radio" name="radio-group" value="Isle of Man or the Channel Islands">
+              <label for="radio-2">Technical problem</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-3" type="radio" name="radio-group" value="I am a British citizen living abroad">
+              <label for="radio-3">Problem logging into HPCDS application</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="panel panel-border-wide">
+          <p>
+            A late claim may result in payment being deferred until the next payment window.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <a class="button" href="prepare-any-claims">Continue</a>
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+
+
+</main>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Start page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/sign-in" method="post" class="form">
+        
+          <fieldset>
+              <legend>
+                  <h1 class="heading-xlarge">Log in</h1>
+              </legend>
+              <div class="form-group">
+                  <label class="form-label" for="id-email">
+  Email address                                  
+</label>
+                  <input class="form-control" name="email" type="" id="id-email" value="">
+              </div>
+              <div class="form-group">
+                  <label class="form-label" for="id-password">
+  Password                                  
+</label>
+                  <input class="form-control" name="password" type="password" id="id-password" value="">
+              </div>
+          </fieldset>
+
+          <div class="form-group">
+              <a href="welcome" class="button">Sign in</a>
+          </div>
+
+      </form>
+
+    </div>
+    <div class="column-third">
+
+      
+
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
